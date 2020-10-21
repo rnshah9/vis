@@ -12,6 +12,13 @@
 #define ISUTF8(c)   (((c)&0xC0)!=0x80)
 #define ISASCII(ch) ((unsigned char)ch < 0x80)
 
+#if TIS_INTERPRETER
+#include <tis_builtin.h>
+#define POINTER_WITHIN(p, start, end) tis_ptr_is_within((void*)(p), (void*)(start), (void*)(end))
+#else
+#define POINTER_WITHIN(p, start, end) ((uintptr_t)(start) <= (uintptr_t)(p) && (uintptr_t)(p) < (uintptr_t)(end))
+#endif
+
 #if GCC_VERSION>=5004000 || CLANG_VERSION>=4000000
 #define addu __builtin_add_overflow
 #else

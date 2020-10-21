@@ -968,7 +968,7 @@ size_t text_mark_get(const Text *txt, Mark mark) {
 	for (Piece *p = txt->begin.next; p->next; p = p->next) {
 		Mark start = (Mark)(p->data);
 		Mark end = start + p->len;
-		if (start <= mark && mark < end)
+		if (POINTER_WITHIN(mark, start, end))
 			return cur + (mark - start);
 		cur += p->len;
 	}
