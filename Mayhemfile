@@ -1,0 +1,5 @@
+project: rnshah9/vis
+target: vis-digraph
+
+cmds:
+  - cmd: /repo/vis-digraph -
