@@ -1,4 +1,4 @@
-project: rnshah9/vis
+project: vis
 target: vis-digraph
 
 cmds:
