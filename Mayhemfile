@@ -2,4 +2,4 @@ project: vis
 target: vis-digraph
 
 cmds:
-  - cmd: /repo/vis-digraph -
+  - cmd: /install/bin/vis-digraph -
