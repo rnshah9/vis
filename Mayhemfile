@@ -1,0 +1,5 @@
+project: vis
+target: vis-digraph
+
+cmds:
+  - cmd: /install/bin/vis-digraph -
