@@ -1,0 +1,6 @@
+project: vis
+target: /text-string-width
+
+cmds:
+  - cmd: /fuzz_text_string_width
+    libfuzzer: true

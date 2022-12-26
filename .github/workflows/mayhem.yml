@@ -59,7 +59,8 @@ jobs:
       fail-fast: false
       matrix:
         mayhemfile:
-          - mayhem/Mayhemfile
+          - mayhem/Mayhemfile_text_string_width
+          - mayhem/Mayhemfile_vis-digraph
 
     steps:
       - uses: actions/checkout@v3
